@@ -3,9 +3,18 @@ import featureSearch
 import time
 
 rows = parseCSV.parse()
+print('would you like to do forward search(1) or backwards elimination(2)?')
+ans = input()
 
 start = time.time()
-res = featureSearch.featureSearch(rows)
+if(ans == '1'):
+    res = featureSearch.featureSearch(rows)
+elif(ans == '2'):
+    res = featureSearch.backwardElim(rows)
+else:
+    print('unknown input, exiting')
+    exit()
+
 print('time spent was aproximately: ' + str(time.time()-start))
 print('best accuracy was: ' + str(res[0]))
 print('set of features was: ' + str(res[1]))
