@@ -14,7 +14,8 @@ elif(ans == '2'):
 else:
     print('unknown input, exiting')
     exit()
-
-print('time spent was aproximately: ' + str(time.time()-start))
+timeSpent = str(time.time()-start)
+timeSpent = timeSpent[0:(timeSpent.find('.')+3)]
+print('time spent was approximately: ' + timeSpent)
 print('best accuracy was: ' + str(res[0]))
 print('set of features was: ' + str(res[1]))

@@ -1,7 +1,7 @@
 import copy
 def parse():
     rows = []
-    with open('D:\school stuff\classes\cs 170\projects\project 2\CS170_Small_Data__96.txt') as f:
+    with open('D:\school stuff\classes\cs 170\projects\project 2\CS170_Large_Data__31.txt') as f:
         lines = f.readlines()
         for i in lines:
             line = i.strip('\n').split('  ')
